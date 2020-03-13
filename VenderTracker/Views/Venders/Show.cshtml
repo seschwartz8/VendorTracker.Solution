@@ -1,3 +1,25 @@
+@using VenderTracker.Models
+
+@{
+  Layout = "_Layout";
+}
+
+<div class="vender-information">
+  <h3>@Model.Name</h3>
+  <p>@Model.Description</p>
+</div>
+
+<div class="order-container">
+  <h3>Orders:</h3>
+  @foreach (Order order in Model.Orders)
+  {
+    <div class="order-information">
+      <a href="venders/{venderId}/orders/{orderId}"><h5>@order.Title</h5></a>
+    </div>
+  }
+</div>
+
 <div class="links">
-  <a href="">Link</a>
+  <a href="/venders/{venderId}/orders/new">Create New Order</a>
+  <a href="/venders">Back To Venders</a>
 </div>

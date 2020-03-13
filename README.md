@@ -50,6 +50,9 @@ A C#/.NET Core MVC website that allows you to see all bakery venders and their o
 - When user submits new vender, he is taken back to splash page and vender is saved
   - Sample input: User clicks submit on vender form
   - Expected output: Splash page reappears, and if user views venders again the new one is present
+- User can delete all venders
+  - Sample input: User clicks on button to delete all within viewing venders page
+  - Expected output: All venders are removed and page notifies user they have no venders
 - User can click a specific vender's name to see all of their orders
   - Sample input: User clicks on vender's name (e.g. "Tall Grass Baking")
   - Expected output: New page with information on all of Tall Grass Baking's orders appears (e.g. 2 croissants, 3 loaves)
@@ -59,9 +62,6 @@ A C#/.NET Core MVC website that allows you to see all bakery venders and their o
 - When user submits new order, he is taken back to specific vender's page
   - Sample input: User clicks submit on order form
   - Expected output: Specific vender page reappears with new order present
-- User can delete all venders
-  - Sample input: User clicks on button to delete all within viewing venders page
-  - Expected output: All venders are removed and page notifies user they have no venders
 
 ## Known Bugs
 

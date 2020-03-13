@@ -37,12 +37,26 @@ namespace VenderTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    // [HttpGet("/objects/{id}")]
-    // public ActionResult Show(int id)
+    [HttpGet("/venders/{id}")]
+    public ActionResult Show(int id)
+    {
+      //Displays one vender's description and all their orders
+      Vender specificVender = Vender.Find(id);
+      return View(specificVender);
+    }
+
+    //     [HttpPost("/categories/{categoryId}/items")]
+    // public ActionResult Create(int categoryId, string itemDescription)
     // {
-    //   //Displays one ClassName's specific details
-    //   ClassName foundClassName = ClassName.Find(id);
-    //   return View(foundClassName);
+    //   // Create new Item within a given Category, not new Categories:
+    //   Dictionary<string, object> model = new Dictionary<string, object>();
+    //   Category foundCategory = Category.Find(categoryId);
+    //   Item newItem = new Item(itemDescription);
+    //   foundCategory.AddItem(newItem);
+    //   List<Item> categoryItems = foundCategory.Items;
+    //   model.Add("items", categoryItems);
+    //   model.Add("category", foundCategory);
+    //   return View("Show", model);
     // }
   }
 }

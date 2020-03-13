@@ -13,13 +13,14 @@
 
   @foreach (Vender vender in Model)
   {
-    <a href="">@vender.Name</a>
+    <a href="/venders/@vender.Id">@vender.Name</a>
   }
 </div>
 
 <div class="links">
   <a href="/venders/new">Add New Vender</a>
   <a href="/venders/deleteAll">Delete All Venders</a>
+  <a href="/">Back To Home</a>
 </div>
 
 
