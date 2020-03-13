@@ -5,23 +5,26 @@
 }
 
 <div class="vender-information">
-  <h3>@Model["vender"].Name</h3>
+  <h1>@Model["vender"].Name</h1>
   <p>@Model["vender"].Description</p>
 </div>
 
-<div class="order-container">
-  <h4>Orders:</h4>
-  @if (Model["orders"].Count == 0)
-  {
-    <div>There are no orders from this vender.</div>
-  }
-  @foreach (Order order in Model["orders"])
-  {
-    <div class="order-information">
-      <a href='/venders/@Model["vender"].Id/orders/@order.Id'><h5>@order.Title</h5></a>
-    </div>
-  }
+<h3>Orders:</h3>
+
+  <div class="orders">
+    @if (Model["orders"].Count == 0)
+    {
+      <div>There are no orders from this vender.</div>
+    }
+    @foreach (Order order in Model["orders"])
+    {
+      <div class="order-information">
+        <a href='/venders/@Model["vender"].Id/orders/@order.Id'>@order.Title</a>
+      </div>
+    }
+
 </div>
+
 
 <div class="links">
   <a href='/venders/@Model["vender"].Id/orders/new'>Create New Order</a>

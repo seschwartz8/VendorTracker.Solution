@@ -3,16 +3,28 @@
   Layout = "_Layout";
 }
 
+<h1>Create A New Order</h1>
+
 <form action="/venders/@Model.Id/orders" method="post">
-  <label for="title">Order Title</label>
-  <input id="title" name="title" type="text">
-  <label for="type">Item Type (e.g. Croissant)</label>
-  <input id="type" name="type" type="text">
-  <label for="amount">Amount Ordered</label>
-  <input id="amount" name="amount" type="number">
-  <label for="priceString">Price (e.g. 5.50)</label>
-  <input id="priceString" name="priceString" type="text">
-  <button type='submit'>Create Order</button>
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input id="title" name="title" type="text" placeholder="Weekly Bread Supply">
+  </div>
+  <div class="form-group">
+    <label for="type">Item Type</label>
+    <input id="type" name="type" type="text" placeholder="Croissant">
+  </div>
+  <div class="form-group">
+    <label for="amount">Quantity</label>
+    <input id="amount" name="amount" type="number" placeholder="25">
+  </div>
+  <div class="form-group">
+    <label for="priceString">Price</label>
+    <input id="priceString" name="priceString" type="text" placeholder="5.50">
+  </div>
+  <div class="btn-container">
+    <button class="btn" type='submit'>Create Order</button>
+  </div>
 </form>
 
 <div class="links">

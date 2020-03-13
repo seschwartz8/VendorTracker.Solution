@@ -17,18 +17,25 @@ COLORS
   color: #894e3f;
 }
 
+span {
+  font-weight: 800;
+}
+
 img {
   max-height: 200px;
 }
 
 a {
   color: #3e746c;
+  font-size: 1.3em;
+  font-weight: 800;
 }
 
 .links a {
   color: white;
   background-color: #c37960;
   padding: 10px;
+  font-weight: 600;
 }
 
 a:hover {
@@ -65,7 +72,6 @@ body {
 }
 
 form {
-  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -73,17 +79,19 @@ form {
 
 .btn {
   background-color: #7ab8ae;
+  font-weight: 600;
   color: white;
   border-radius: 0;
   font-size: 1.1em;
+  margin: 20px 0;
 }
 
 .btn-container {
   width: 100%;
 }
 
-.form-display {
-  width: 100%;
+.display {
+  min-width: 70%;
+  display: flex;
   justify-content: space-around;
-  flex-wrap: nowrap;
 }
