@@ -17,6 +17,10 @@ COLORS
   color: #894e3f;
 }
 
+img {
+  max-height: 200px;
+}
+
 a {
   color: #3e746c;
 }
