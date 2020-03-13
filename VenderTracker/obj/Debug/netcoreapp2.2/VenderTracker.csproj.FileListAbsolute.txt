@@ -26,3 +26,4 @@
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/VenderTracker.dll
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/VenderTracker.pdb
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/VenderTracker.csproj.CopyComplete
+/Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Orders/Show.g.cshtml.cs
