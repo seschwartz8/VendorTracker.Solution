@@ -70,5 +70,19 @@ namespace VenderTracker.Tests
       List<Order> result = vender.Orders;
       CollectionAssert.AreEqual(expectedOrders, result);
     }
+
+    [TestMethod]
+    public void RemoveOrder_RemoveOrderFromSpecificVender_OrderList()
+    {
+      Order order1 = new Order("title", "itemType", 2, 5.50, "dueDate");
+      Order order2 = new Order("title2", "itemType2", 3, 3.50, "dueDate2");
+      Vender vender = new Vender("name", "description");
+      vender.AddOrder(order1);
+      vender.AddOrder(order2);
+      vender.RemoveOrder(order2);
+      List<Order> expectedOrders = new List<Order> { order1 };
+      List<Order> result = vender.Orders;
+      CollectionAssert.AreEqual(expectedOrders, result);
+    }
   }
 }

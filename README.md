@@ -62,6 +62,9 @@ A C#/.NET Core MVC website that allows you to see all bakery venders and their o
 - When user submits new order, he is taken back to specific vender's page
   - Sample input: User clicks submit on order form
   - Expected output: Specific vender page reappears with new order present
+- User can delete specific order
+  - Sample input: While looking at specific order's details, user clicks "Delete This Order"
+  - Expected output: Specific vender page reappears with new order removed
 
 ## Known Bugs
 

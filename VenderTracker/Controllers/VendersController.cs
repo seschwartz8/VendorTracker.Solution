@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using VenderTracker.Models;
@@ -50,11 +51,20 @@ namespace VenderTracker.Controllers
     }
 
     [HttpPost("/venders/{venderId}/orders")]
-    public ActionResult Create(int venderId, string title, string type, int amount, double price, string date)
+    public ActionResult Create(int venderId, string title, string type, int amount, string priceString, string date)
     {
       // Create new Order within a given Vender, not creating a new Vender:
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vender specificVender = Vender.Find(venderId);
+      double price;
+      try
+      {
+        price = Convert.ToDouble(priceString);
+      }
+      catch
+      {
+        price = 0.00;
+      }
       Order newOrder = new Order(title, type, amount, price, date);
       specificVender.AddOrder(newOrder);
       List<Order> venderOrders = specificVender.Orders;

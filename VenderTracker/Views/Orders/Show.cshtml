@@ -3,8 +3,14 @@
 @{
   Layout = "_Layout";
 }
-  <h2>@Model["order"].Title by @Model["vender"].Name</h2>
-  <h4><span>Type:</span> @Model["order"].Type</h4>
-  <h4><span>Amount:</span> @Model["order"].Amount</h4>
-  <h4><span>Price:</span> @Model["order"].Price</h4>
-  <h4><span>Due Date:</span> @Model["order"].Date</h4>
+
+<h2>@Model["order"].Title by @Model["vender"].Name</h2>
+<h4><span>Type:</span> @Model["order"].Type</h4>
+<h4><span>Amount:</span> @Model["order"].Amount</h4>
+<h4><span>Price:</span> @Model["order"].Price</h4>
+<h4><span>Due Date:</span> @Model["order"].Date</h4>
+
+<div class="links">
+  <a href='/venders/@Model["vender"].Id'>Back To @Model["vender"].Name</a>
+  <a href='/venders/@Model["vender"].Id/orders/@Model["order"].Id/delete'>Delete This Order</a>
+</div>
