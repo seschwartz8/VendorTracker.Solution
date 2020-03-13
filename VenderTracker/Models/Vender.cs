@@ -39,5 +39,10 @@ namespace VenderTracker.Models
     {
       Orders.Add(order);
     }
+
+    public void RemoveOrder(Order order)
+    {
+      Orders.Remove(order);
+    }
   }
 }
