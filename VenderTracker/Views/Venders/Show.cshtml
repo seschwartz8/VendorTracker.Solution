@@ -18,7 +18,7 @@
   @foreach (Order order in Model["orders"])
   {
     <div class="order-information">
-      <a href='venders/@Model["vender"].Id/orders/@order.Id'><h5>@order.Title</h5></a>
+      <a href='/venders/@Model["vender"].Id/orders/@order.Id'><h5>@order.Title</h5></a>
     </div>
   }
 </div>

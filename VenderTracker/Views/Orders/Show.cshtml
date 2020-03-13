@@ -3,8 +3,8 @@
 @{
   Layout = "_Layout";
 }
-  <h2>@Model.Title</h2>
-  <h4><span>Type:</span> @Model.Type</h4>
-  <h4><span>Amount:</span> @Model.Amount</h4>
-  <h4><span>Price:</span> @Model.Price</h4>
-  <h4><span>Due Date:</span> @Model.Date</h4>
+  <h2>@Model["order"].Title by @Model["vender"].Name</h2>
+  <h4><span>Type:</span> @Model["order"].Type</h4>
+  <h4><span>Amount:</span> @Model["order"].Amount</h4>
+  <h4><span>Price:</span> @Model["order"].Price</h4>
+  <h4><span>Due Date:</span> @Model["order"].Date</h4>

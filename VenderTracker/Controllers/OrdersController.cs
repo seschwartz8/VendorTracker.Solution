@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using VenderTracker.Models;
 
@@ -8,7 +9,7 @@ namespace VenderTracker.Controllers
     [HttpGet("/venders/{venderId}/orders/new")]
     public ActionResult New(int venderId)
     {
-      // Offers form to create new Order for a specific Vender
+      // Offers form to create new Order for a specific vender
       Vender vender = Vender.Find(venderId);
       return View(vender);
     }
@@ -20,15 +21,16 @@ namespace VenderTracker.Controllers
     //   return View();
     // }
 
-    // [HttpGet("/categories/{categoryId}/items/{itemId}")]
-    // public ActionResult Show(int categoryId, int itemId)
-    // {
-    //   Item item = Item.Find(itemId);
-    //   Category category = Category.Find(categoryId);
-    //   Dictionary<string, object> model = new Dictionary<string, object>();
-    //   model.Add("item", item);
-    //   model.Add("category", category);
-    //   return View(model);
-    // }
+    [HttpGet("/venders/{venderId}/orders/{orderId}")]
+    public ActionResult Show(int venderId, int orderId)
+    {
+      // Show order information about specific order from specific vender
+      Order specificOrder = Order.Find(orderId);
+      Vender specificVender = Vender.Find(venderId);
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      model.Add("order", specificOrder);
+      model.Add("vender", specificVender);
+      return View(model);
+    }
   }
 }
