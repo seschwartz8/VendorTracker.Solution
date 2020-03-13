@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using VenderTracker.Models;
 
@@ -5,13 +6,13 @@ namespace VenderTracker.Controllers
 {
   public class VendersController : Controller
   {
-    // [HttpGet("/objects")]
-    // public ActionResult Index()
-    // {
-    //   //Displays list of places
-    //   List<ClassName> allObjects = ClassName.GetAll();
-    //   return View(allObjects);
-    // }
+    [HttpGet("/venders")]
+    public ActionResult Index()
+    {
+      //Displays list of venders
+      List<Vender> venders = Vender.GetAll();
+      return View(venders);
+    }
 
     // [HttpGet("/objects/new")]
     // public ActionResult New()
