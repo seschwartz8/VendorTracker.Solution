@@ -35,7 +35,7 @@ namespace VenderTracker.Models
       return _instances[id - 1];
     }
 
-    public static void AddOrder(Order order)
+    public void AddOrder(Order order)
     {
       Orders.Add(order);
     }

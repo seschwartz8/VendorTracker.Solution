@@ -30,7 +30,7 @@ namespace VenderTracker.Tests
       Vender vender = new Vender(name, description);
       Assert.AreEqual(name, vender.Name);
       Assert.AreEqual(description, vender.Description);
-      Assert.AreEqual(emptyList, vender.Orders);
+      CollectionAssert.AreEqual(emptyList, vender.Orders);
     }
 
     [TestMethod]
