@@ -1,0 +1,4 @@
+/Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker.Tests/obj/Debug/netcoreapp2.2/VenderTracker.Tests.csprojAssemblyReference.cache
+/Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker.Tests/obj/Debug/netcoreapp2.2/VenderTracker.Tests.csproj.CoreCompileInputs.cache
+/Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker.Tests/obj/Debug/netcoreapp2.2/VenderTracker.Tests.AssemblyInfoInputs.cache
+/Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker.Tests/obj/Debug/netcoreapp2.2/VenderTracker.Tests.AssemblyInfo.cs
