@@ -1,12 +1,12 @@
 using System;
 
-namespace ProjectName.Models
+namespace VenderTracker.Models
 {
-  public class SecondClass
+  public class Order
   {
     public string Name { get; set; }
 
-    public SecondClass(string name)
+    public Order(string name)
     {
       Name = name;
     }
