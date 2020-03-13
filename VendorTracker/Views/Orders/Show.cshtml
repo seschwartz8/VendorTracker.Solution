@@ -1,0 +1,16 @@
+@using VendorTracker.Models
+
+@{
+  Layout = "_Layout";
+}
+
+<h1>@Model["order"].Title by @Model["vendor"].Name</h1>
+<h4><span>Type:</span> @Model["order"].Type</h4>
+<h4><span>Amount:</span> @Model["order"].Amount</h4>
+<h4><span>Price:</span> @Model["order"].Price</h4>
+<h4><span>Due Date:</span> @Model["order"].Date</h4>
+
+<div class="links">
+  <a href='/vendors/@Model["vendor"].Id'>Back To @Model["vendor"].Name</a>
+  <a href='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id/delete'>Delete This Order</a>
+</div>

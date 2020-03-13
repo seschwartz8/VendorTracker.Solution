@@ -1,0 +1,32 @@
+@using VendorTracker.Models
+
+@{
+  Layout = "_Layout";
+}
+
+<div class="vendor-information">
+  <h1>@Model["vendor"].Name</h1>
+  <p>@Model["vendor"].Description</p>
+</div>
+
+<h3>Orders:</h3>
+
+  <div class="orders">
+    @if (Model["orders"].Count == 0)
+    {
+      <div>There are no orders from this vendor.</div>
+    }
+    @foreach (Order order in Model["orders"])
+    {
+      <div class="order-information">
+        <a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a>
+      </div>
+    }
+
+</div>
+
+
+<div class="links">
+  <a href='/vendors/@Model["vendor"].Id/orders/new'>Create New Order</a>
+  <a href="/vendors">Back To Vendors</a>
+</div>
