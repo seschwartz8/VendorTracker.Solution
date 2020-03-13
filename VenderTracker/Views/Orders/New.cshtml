@@ -1,8 +1,20 @@
-<p>NEW ORDER FORM!</p>
+@using VenderTracker.Models
+@{
+  Layout = "_Layout";
+}
 
-@* <form action="/venders/@Model.Id/orders" method="post">
-  <input id="categoryId" name="categoryId" type="hidden" value="@Model.Id">
-  <label for="itemDescription">Item Description</label>
-  <input id="itemDescription" name="itemDescription" type="text">
-  <button type='submit'>Add Item</button>
-</form> *@
+<form action="/venders/@Model.Id/orders" method="post">
+  <label for="title">Order Title</label>
+  <input id="title" name="title" type="text">
+  <label for="type">Item Type (e.g. Croissant)</label>
+  <input id="type" name="type" type="text">
+  <label for="amount">Amount Ordered</label>
+  <input id="amount" name="amount" type="number">
+  <label for="price">Price (e.g. 5.50)</label>
+  <input id="price" name="price" type="text">
+  <button type='submit'>Create Order</button>
+</form>
+
+<div class="links">
+  <a href='/venders/@Model.Id'>Back To @Model.Name</a>
+</div>

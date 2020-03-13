@@ -58,7 +58,7 @@ namespace VenderTracker.Controllers
       Order newOrder = new Order(title, type, amount, price, date);
       specificVender.AddOrder(newOrder);
       List<Order> venderOrders = specificVender.Orders;
-      model.Add("order", venderOrders);
+      model.Add("orders", venderOrders);
       model.Add("vender", specificVender);
       return View("Show", model);
     }

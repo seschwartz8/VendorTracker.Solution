@@ -11,10 +11,14 @@
 
 <div class="order-container">
   <h4>Orders:</h4>
+  @if (Model["orders"].Count == 0)
+  {
+    <div>There are no orders from this vender.</div>
+  }
   @foreach (Order order in Model["orders"])
   {
     <div class="order-information">
-      <a href='venders/@Model.Id["vender"]/orders/@order.Id'><h5>@order.Title</h5></a>
+      <a href='venders/@Model["vender"].Id/orders/@order.Id'><h5>@order.Title</h5></a>
     </div>
   }
 </div>
