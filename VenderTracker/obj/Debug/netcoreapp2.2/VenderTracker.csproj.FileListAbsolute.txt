@@ -17,7 +17,6 @@
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Orders/Index.g.cshtml.cs
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs
-/Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Venders/DeleteAll.g.cshtml.cs
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Venders/Index.g.cshtml.cs
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Venders/New.g.cshtml.cs
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Venders/Show.g.cshtml.cs

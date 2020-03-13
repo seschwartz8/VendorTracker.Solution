@@ -14,28 +14,28 @@ namespace VenderTracker.Controllers
       return View(venders);
     }
 
-    // [HttpGet("/objects/new")]
-    // public ActionResult New()
-    // {
-    //   //Offers form to create new place
-    //   return View();
-    // }
+    [HttpGet("/venders/new")]
+    public ActionResult New()
+    {
+      //Offers form to create new vender
+      return View();
+    }
 
-    // [HttpPost("/objects")]
-    // public ActionResult Create(string description)
-    // {
-    //   //Creates new ClassName
-    //   Place myClassName = new ClassName(description);
-    //   return RedirectToAction("Index");
-    // }
+    [HttpPost("/")]
+    public ActionResult Create(string name, string description)
+    {
+      //Creates new Vender object
+      Vender newVender = new Vender(name, description);
+      return RedirectToAction("Index", "/");
+    }
 
-    // [HttpPost("/objects/delete")]
-    // public ActionResult DeleteAll()
-    // {
-    //   //Clears all ClassNames
-    //   ClassName.ClearAll();
-    //   return View();
-    // }
+    [HttpGet("/venders/deleteAll")]
+    public ActionResult DeleteAll()
+    {
+      //Clears all Venders
+      Vender.ClearAll();
+      return RedirectToAction("Index");
+    }
 
     // [HttpGet("/objects/{id}")]
     // public ActionResult Show(int id)
