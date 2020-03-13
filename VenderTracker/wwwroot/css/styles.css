@@ -76,3 +76,8 @@ form {
   display: flex;
   flex-direction: column;
 }
+
+.form-display {
+  width: 100%;
+  justify-content: space-around;
+}
