@@ -5,43 +5,30 @@ namespace VenderTracker.Controllers
 {
   public class OrdersController : Controller
   {
-    // [HttpGet("/objects")]
-    // public ActionResult Index()
-    // {
-    //   //Displays list of places
-    //   List<SecondClass> allObjects = SecondClass.GetAll();
-    //   return View(allObjects);
-    // }
+    [HttpGet("/venders/{venderId}/orders/new")]
+    public ActionResult New(int venderId)
+    {
+      // Offers form to create new Order for a specific Vender
+      Vender vender = Vender.Find(venderId);
+      return View(vender);
+    }
 
-    // [HttpGet("/objects/new")]
-    // public ActionResult New()
-    // {
-    //   //Offers form to create new place
-    //   return View();
-    // }
-
-    // [HttpPost("/objects")]
-    // public ActionResult Create(string description)
-    // {
-    //   //Creates new SecondClass
-    //   Place mySecondClass = new SecondClass(description);
-    //   return RedirectToAction("Index");
-    // }
-
-    // [HttpPost("/objects/delete")]
+    // [HttpPost("/items/delete")]
     // public ActionResult DeleteAll()
     // {
-    //   //Clears all SecondClasses
-    //   SecondClass.ClearAll();
+    //   Item.ClearAll();
     //   return View();
     // }
 
-    // [HttpGet("/objects/{id}")]
-    // public ActionResult Show(int id)
+    // [HttpGet("/categories/{categoryId}/items/{itemId}")]
+    // public ActionResult Show(int categoryId, int itemId)
     // {
-    //   //Displays one SecondClass's specific details
-    //   SecondClass foundSecondClass = SecondClass.Find(id);
-    //   return View(foundSecondClass);
+    //   Item item = Item.Find(itemId);
+    //   Category category = Category.Find(categoryId);
+    //   Dictionary<string, object> model = new Dictionary<string, object>();
+    //   model.Add("item", item);
+    //   model.Add("category", category);
+    //   return View(model);
     // }
   }
 }

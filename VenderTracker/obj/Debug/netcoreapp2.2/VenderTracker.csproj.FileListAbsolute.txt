@@ -15,7 +15,6 @@
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/VenderTracker.TagHelpers.output.cache
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/VenderTracker.RazorCoreGenerate.cache
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Home/Index.g.cshtml.cs
-/Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Orders/Index.g.cshtml.cs
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Shared/_Layout.g.cshtml.cs
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Venders/Index.g.cshtml.cs
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Venders/New.g.cshtml.cs
@@ -27,3 +26,4 @@
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/VenderTracker.pdb
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/VenderTracker.csproj.CopyComplete
 /Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Orders/Show.g.cshtml.cs
+/Users/Sarah Schwartz/Desktop/EPICODUS/Projects/VenderTracker.Solution/VenderTracker/obj/Debug/netcoreapp2.2/Razor/Views/Orders/New.g.cshtml.cs

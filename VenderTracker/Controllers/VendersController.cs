@@ -41,22 +41,26 @@ namespace VenderTracker.Controllers
     public ActionResult Show(int id)
     {
       //Displays one vender's description and all their orders
+      Dictionary<string, object> model = new Dictionary<string, object>();
       Vender specificVender = Vender.Find(id);
-      return View(specificVender);
+      List<Order> orderList = specificVender.Orders;
+      model.Add("vender", specificVender);
+      model.Add("orders", orderList);
+      return View(model);
     }
 
-    //     [HttpPost("/categories/{categoryId}/items")]
-    // public ActionResult Create(int categoryId, string itemDescription)
-    // {
-    //   // Create new Item within a given Category, not new Categories:
-    //   Dictionary<string, object> model = new Dictionary<string, object>();
-    //   Category foundCategory = Category.Find(categoryId);
-    //   Item newItem = new Item(itemDescription);
-    //   foundCategory.AddItem(newItem);
-    //   List<Item> categoryItems = foundCategory.Items;
-    //   model.Add("items", categoryItems);
-    //   model.Add("category", foundCategory);
-    //   return View("Show", model);
-    // }
+    [HttpPost("/venders/{venderId}/orders")]
+    public ActionResult Create(int venderId, string title, string type, int amount, double price, string date)
+    {
+      // Create new Order within a given Vender, not creating a new Vender:
+      Dictionary<string, object> model = new Dictionary<string, object>();
+      Vender specificVender = Vender.Find(venderId);
+      Order newOrder = new Order(title, type, amount, price, date);
+      specificVender.AddOrder(newOrder);
+      List<Order> venderOrders = specificVender.Orders;
+      model.Add("order", venderOrders);
+      model.Add("vender", specificVender);
+      return View("Show", model);
+    }
   }
 }
