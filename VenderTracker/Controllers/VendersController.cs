@@ -10,7 +10,7 @@ namespace VenderTracker.Controllers
     [HttpGet("/venders")]
     public ActionResult Index()
     {
-      //Displays list of venders
+      // Display list of venders
       List<Vender> venders = Vender.GetAll();
       return View(venders);
     }
@@ -18,14 +18,14 @@ namespace VenderTracker.Controllers
     [HttpGet("/venders/new")]
     public ActionResult New()
     {
-      //Offers form to create new vender
+      // Offer form to create new vender
       return View();
     }
 
     [HttpPost("/")]
     public ActionResult Create(string name, string description)
     {
-      //Creates new Vender object
+      // Create new Vender object
       Vender newVender = new Vender(name, description);
       return RedirectToAction("Index", "/");
     }
@@ -33,7 +33,7 @@ namespace VenderTracker.Controllers
     [HttpGet("/venders/deleteAll")]
     public ActionResult DeleteAll()
     {
-      //Clears all Venders
+      // Clear all venders
       Vender.ClearAll();
       return RedirectToAction("Index");
     }
@@ -41,7 +41,7 @@ namespace VenderTracker.Controllers
     [HttpGet("/venders/{id}")]
     public ActionResult Show(int id)
     {
-      //Displays one vender's description and all their orders
+      // Display one vender's description and all their orders
       Dictionary<string, object> model = new Dictionary<string, object>();
       Vender specificVender = Vender.Find(id);
       List<Order> orderList = specificVender.Orders;
@@ -71,6 +71,16 @@ namespace VenderTracker.Controllers
       model.Add("orders", venderOrders);
       model.Add("vender", specificVender);
       return View("Show", model);
+    }
+
+    [HttpGet("/venders/{venderId}/orders/{orderId}/delete")]
+    public ActionResult DeleteOrder(int venderId, int orderId)
+    {
+      // Delete specific order
+      Order specificOrder = Order.Find(orderId);
+      Vender specificVender = Vender.Find(venderId);
+      specificVender.RemoveOrder(specificOrder);
+      return RedirectToAction("Index");
     }
   }
 }

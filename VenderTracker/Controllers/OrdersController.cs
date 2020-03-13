@@ -25,15 +25,5 @@ namespace VenderTracker.Controllers
       model.Add("vender", specificVender);
       return View(model);
     }
-
-    [HttpGet("/venders/{venderId}/orders/{orderId}/delete")]
-    public ActionResult DeleteOrder(int venderId, int orderId)
-    {
-      //Delete specific order
-      Order specificOrder = Order.Find(orderId);
-      Vender specificVender = Vender.Find(venderId);
-      specificVender.RemoveOrder(specificOrder);
-      return RedirectToAction("Show", "/vender/{venderId}");
-    }
   }
 }
